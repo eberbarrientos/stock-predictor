@@ -1,0 +1,85 @@
+2025-07-09 17:23:06,945 [ERROR] Error in /predict: positional indexers are out-of-bounds
+Traceback (most recent call last):
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/indexing.py", line 1714, in _get_list_axis
+    return self.obj._take_with_is_copy(key, axis=axis)
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/generic.py", line 4153, in _take_with_is_copy
+    result = self.take(indices=indices, axis=axis)
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/generic.py", line 4133, in take
+    new_data = self._mgr.take(
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/internals/managers.py", line 891, in take
+    indexer = maybe_convert_indices(indexer, n, verify=verify)
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/indexers/utils.py", line 282, in maybe_convert_indices
+    raise IndexError("indices are out-of-bounds")
+IndexError: indices are out-of-bounds
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/eberbarrientos/stock-predictor/api/api.py", line 63, in predict
+    latest = df.iloc[[-1]]
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/indexing.py", line 1191, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/indexing.py", line 1743, in _getitem_axis
+    return self._get_list_axis(key, axis=axis)
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/indexing.py", line 1717, in _get_list_axis
+    raise IndexError("positional indexers are out-of-bounds") from err
+IndexError: positional indexers are out-of-bounds
+2025-07-09 17:23:17,955 [ERROR] Error in /predict: positional indexers are out-of-bounds
+Traceback (most recent call last):
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/indexing.py", line 1714, in _get_list_axis
+    return self.obj._take_with_is_copy(key, axis=axis)
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/generic.py", line 4153, in _take_with_is_copy
+    result = self.take(indices=indices, axis=axis)
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/generic.py", line 4133, in take
+    new_data = self._mgr.take(
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/internals/managers.py", line 891, in take
+    indexer = maybe_convert_indices(indexer, n, verify=verify)
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/indexers/utils.py", line 282, in maybe_convert_indices
+    raise IndexError("indices are out-of-bounds")
+IndexError: indices are out-of-bounds
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/eberbarrientos/stock-predictor/api/api.py", line 63, in predict
+    latest = df.iloc[[-1]]
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/indexing.py", line 1191, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/indexing.py", line 1743, in _getitem_axis
+    return self._get_list_axis(key, axis=axis)
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/indexing.py", line 1717, in _get_list_axis
+    raise IndexError("positional indexers are out-of-bounds") from err
+IndexError: positional indexers are out-of-bounds
+2025-07-09 17:24:12,870 [INFO] /predict_stock | MSFT | confidence: 0.370 | signal: Hold
+2025-07-09 17:24:38,823 [INFO] /predict_etf | VOO | horizon: 180d | confidence: 0.904 | signal: Buy
+2025-07-09 17:26:00,469 [ERROR] Error in /predict: positional indexers are out-of-bounds
+Traceback (most recent call last):
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/indexing.py", line 1714, in _get_list_axis
+    return self.obj._take_with_is_copy(key, axis=axis)
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/generic.py", line 4153, in _take_with_is_copy
+    result = self.take(indices=indices, axis=axis)
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/generic.py", line 4133, in take
+    new_data = self._mgr.take(
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/internals/managers.py", line 891, in take
+    indexer = maybe_convert_indices(indexer, n, verify=verify)
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/indexers/utils.py", line 282, in maybe_convert_indices
+    raise IndexError("indices are out-of-bounds")
+IndexError: indices are out-of-bounds
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/eberbarrientos/stock-predictor/api/api.py", line 63, in predict
+    latest = df.iloc[[-1]]
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/indexing.py", line 1191, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/indexing.py", line 1743, in _getitem_axis
+    return self._get_list_axis(key, axis=axis)
+  File "/Users/eberbarrientos/Library/Python/3.9/lib/python/site-packages/pandas/core/indexing.py", line 1717, in _get_list_axis
+    raise IndexError("positional indexers are out-of-bounds") from err
+IndexError: positional indexers are out-of-bounds
+2025-07-09 17:42:05,343 [INFO] /predict_stock | VOO | confidence: 0.360 | signal: Hold
+2025-07-09 17:42:21,431 [INFO] /predict_etf | VOO | horizon: 30d | confidence: 0.891 | signal: Buy
+2025-07-09 17:46:59,918 [INFO] /predict_etf | SPY | horizon: 30d | confidence: 0.888 | signal: Buy
+2025-07-09 17:47:09,901 [INFO] /predict_stock | AAPL | confidence: 0.360 | signal: Hold
+2025-07-09 17:47:31,335 [INFO] /predict_stock | MSFT | confidence: 0.370 | signal: Hold
