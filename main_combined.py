@@ -56,4 +56,6 @@ def combine_signals(
     print(f"\n📊 Combined Signal for {ticker}: {action}")
 
 if __name__ == "__main__":
-    combine_signals()
+    import uvicorn
+    uvicorn.run("api.api:app", host="0.0.0.0", port=8000, reload=False)
+
