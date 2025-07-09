@@ -7,3 +7,4 @@ yfinance
 scikit-learn
 joblib
 matplotlib
+imbalanced-learn
