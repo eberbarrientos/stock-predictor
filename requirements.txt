@@ -1,10 +1,10 @@
 fastapi
 uvicorn
-pydantic
 pandas
 numpy
-yfinance
 scikit-learn
 joblib
-matplotlib
+yfinance
 imbalanced-learn
+matplotlib
+pydantic
