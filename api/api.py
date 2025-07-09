@@ -45,7 +45,7 @@ def determine_signal(stock_prob, etf_prob, stock_thresh=0.65, etf_thresh=0.55):
     else:
         return "Hold"
 
-@app.get("/predict_stock (short-term)", response_model=PredictionResponse)
+@app.get("/predict_stock", response_model=PredictionResponse)
 def predict_stock(
     ticker: str = Query(...),
     start: Optional[str] = Query("2020-01-01"),
@@ -72,7 +72,7 @@ def predict_stock(
         logger.exception(f"Error in /predict_stock: {e}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
-@app.get("/predict_etf (long-term)", response_model=PredictionResponse)
+@app.get("/predict_etf", response_model=PredictionResponse)
 def predict_etf(
     ticker: str = Query(...),
     horizon: int = Query(30, description="Prediction horizon (30, 60, 90, 120, 180)"),
