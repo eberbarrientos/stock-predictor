@@ -48,10 +48,13 @@ def determine_signal(stock_prob, etf_prob, stock_thresh=0.65, etf_thresh=0.55):
 @app.get("/predict_stock", response_model=PredictionResponse)
 def predict_stock(
     ticker: str = Query(...),
-    start: Optional[str] = Query("2020-01-01"),
-    end: Optional[str] = Query(datetime.today().strftime("%Y-%m-%d"))
+    train_start: Optional[str] = Query(None),
+    train_end: Optional[str] = Query(None)
 ):
     try:
+        start = train_start or "2020-01-01"
+        end = train_end or datetime.today().strftime("%Y-%m-%d")
+
         df = fetch_stock_data(ticker, start, end)
         if df.empty:
             raise HTTPException(status_code=404, detail="No data found for this ticker.")
@@ -76,12 +79,15 @@ def predict_stock(
 def predict_etf(
     ticker: str = Query(...),
     horizon: int = Query(30, description="Prediction horizon (30, 60, 90, 120, 180)"),
-    start: Optional[str] = Query("2010-01-01"),
-    end: Optional[str] = Query(datetime.today().strftime("%Y-%m-%d"))
+    train_start: Optional[str] = Query(None),
+    train_end: Optional[str] = Query(None)
 ):
     try:
         if horizon not in [30, 60, 90, 120, 180]:
             raise HTTPException(status_code=400, detail="Unsupported horizon. Choose from 30, 60, 90, 120, 180.")
+
+        start = train_start or "2010-01-01"
+        end = train_end or datetime.today().strftime("%Y-%m-%d")
 
         df = fetch_stock_data(ticker, start, end)
         if df.empty:
