@@ -4,6 +4,15 @@ from src.data_loader import fetch_stock_data
 from src.features import add_features
 from src.model_stock import load_model as load_stock_model
 from src.model_etf import load_etf_model
+from src.model_stock import train_model
+
+# Check if model exists
+import os
+if not os.path.exists("models/random_forest.pkl"):
+    df = fetch_stock_data("AAPL", "2015-01-01", "2023-12-31")
+    df = add_features(df)
+    train_model(df)
+
 
 def combine_signals(
     ticker="AAPL", 
