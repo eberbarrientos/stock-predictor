@@ -39,7 +39,7 @@ Raw Ticker ---> Feature Engineering ---> ML Model
 ## 🖥️ Live Demo
 
 ## 🔗 Streamlit Dashboard  
-👉 [Smart Investment Signal Dashboard](https://your-streamlit-app-url.com)
+👉 [Smart Investment Signal Dashboard](https://stock-predictor12473.streamlit.app)
 
 ### 🔗 API Server  
 👉 [https://stock-predictor-production.up.railway.app](https://stock-predictor-production.up.railway.app)
