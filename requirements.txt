@@ -8,3 +8,5 @@ yfinance
 imbalanced-learn
 matplotlib
 pydantic
+streamlit
+requests
